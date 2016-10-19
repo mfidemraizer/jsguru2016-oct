@@ -1,0 +1,34 @@
+{
+  "name": "jsguru2016-oct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfidemraizer/jsguru2016-oct.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfidemraizer/jsguru2016-oct/issues"
+  },
+  "homepage": "https://github.com/mfidemraizer/jsguru2016-oct#readme",
+  "jspm": {
+    "directories": {
+      "packages": "js/lib"
+    },
+    "configFile": "js/config.js",
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2"
+  }
+}
