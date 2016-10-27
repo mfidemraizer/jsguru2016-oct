@@ -1,4 +1,6 @@
 import "./oop.js";
+import "./callApplyBind.js";
+import "./arrayFunctions.js";
 
 function A() {
   this.x = 11;
