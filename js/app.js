@@ -1,6 +1,10 @@
 import "./oop.js";
 import "./callApplyBind.js";
 import "./arrayFunctions.js";
+//import "./retos/5.js"
+//import "./retos/4.js"
+//import "./retos/6.js"
+import "./retos/7.js"
 
 function A() {
   this.x = 11;
