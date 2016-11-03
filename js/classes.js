@@ -1,10 +1,10 @@
 class A {
     constructor(name) {
-      this._name = name;
+        this._name = name;
     }
 
     get name() {
-      return `${this._name}!`;
+        return `${this._name}!`;
     }
 
     set name(value) {
