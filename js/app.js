@@ -2,6 +2,9 @@ import "./oop.js";
 import "./callApplyBind.js";
 import "./arrayFunctions.js";
 
+import "./promisePatternImplementation.js";
+import "./promiseSample.js";
+
 function A() {
     this.x = 11;
 };
