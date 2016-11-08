@@ -50,6 +50,23 @@ class Promise {
         this.handlers = [];
     }
 
+    static all(...promises) {
+        var deferred = new Deferred();
+        var results = [];
+
+        promises.forEach(promise => {
+            promise.then((...args) => {
+                count++;
+
+                results.push(args);
+
+                if (results.length == promises.length)
+                    deferred.resolve.apply(this, results);
+            });
+        });
+    }
+
+
     then(successHandler, rejectHandler) {
         var hasSuccessHandler = typeof successHandler == "function";
         var hasRejectHandler = typeof rejectHandler == "function";
@@ -72,6 +89,7 @@ class Promise {
         else
             rejectHandler.apply(this, this.deferred.args);
 
+        return this;
     }
 
     fail(handler) {
