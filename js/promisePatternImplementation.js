@@ -50,22 +50,45 @@ class Promise {
         this.handlers = [];
     }
 
+    static race(...promises) {
+        var deferred = new Deferred();
+        var results = [];
+
+        promises.forEach(promise => {
+            var reject = false;
+
+            promise.then((...args) => {
+                if (!deferred.completed)
+                    deferred.resolve.apply(promise, args);
+            });
+        });
+    }
+
     static all(...promises) {
         var deferred = new Deferred();
         var results = [];
 
         promises.forEach(promise => {
-            promise.then((...args) => {
-                count++;
+            var reject = false;
 
+            promise.then((...args) => {
+              
                 results.push(args);
 
                 if (results.length == promises.length)
                     deferred.resolve.apply(this, results);
+            }, () => {
+                reject = true;
             });
         });
     }
 
+    always(handler) {
+        return this.then(
+            (...args) => handler.apply(this, args),
+            (...args) => handler.apply(this, args)
+        );
+    }
 
     then(successHandler, rejectHandler) {
         var hasSuccessHandler = typeof successHandler == "function";

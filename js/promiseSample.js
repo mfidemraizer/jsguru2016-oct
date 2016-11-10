@@ -12,6 +12,14 @@ function sumAsync(a, b) {
     return deferred.promise;
 }
 
+.then().then
+
+function x(promise) {
+  promise.then(() => console.log("yuhu!"));
+}
+
+x(sumAsync(2, 3).then(() => console.log("hey")));
+
 var sumPromise = sumAsync(1, 2);
 var sumPromise1 = sumAsync(1, 2);
 var sumPromise2 = sumAsync(1, 2);
