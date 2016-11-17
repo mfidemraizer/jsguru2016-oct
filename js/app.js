@@ -3,7 +3,13 @@ import "./callApplyBind.js";
 import "./arrayFunctions.js";
 
 import "./promisePatternImplementation.js";
-import "./promiseSample.js";
+//import "./promiseSample.js";
+
+import "./symbolsesnext.js";
+
+import "./iterators.js";
+import "./generators.js";
+import "./decorators.js";
 
 function A() {
     this.x = 11;
