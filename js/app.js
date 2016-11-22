@@ -12,6 +12,9 @@ import "./iterators.js";
 import "./generators.js";
 import "./decorators.js";
 
+import "./workers.js";
+import "./objectProxies.js";
+
 function A() {
     this.x = 11;
 };
